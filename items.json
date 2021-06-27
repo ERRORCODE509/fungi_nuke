@@ -1,0 +1,59 @@
+[
+  {
+    "id": "fungi_nuke",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "fungicidal nuke" },
+    "description": "For when that fungal tower starts growing. Activate to arm.",
+    "weight": "1264 g",
+    "volume": "250 ml",
+    "price": 500,
+    "price_postapoc": 250,
+    "to_hit": -1,
+    "bashing": 6,
+    "material": [ "steel" ],
+    "symbol": "*",
+    "color": "dark_gray",
+    "use_action": {
+      "need_wielding": false,
+      "target": "fungi_nuke_act",
+      "msg": "You arm the fungicidal nuke.",
+      "target_charges": 10,
+      "active": true,
+      "menu_text": "Arm",
+      "type": "transform"
+    },
+    "flags": [ "RADIO_MODABLE", "RADIO_INVOKE_PROC", "BOMB" ]
+  },
+  {
+    "id": "fungi_nuke_act",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "active fungicidal nuke" },
+    "description": "This fungicidal nuke is ready to wreak havoc on the mycus. It would be a good idea to wear a gas mask or something.",
+    "weight": "1264 g",
+    "volume": "250 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "to_hit": -1,
+    "bashing": 6,
+    "material": [ "steel" ],
+    "symbol": "*",
+    "color": "dark_gray",
+    "initial_charges": 3,
+    "max_charges": 3,
+    "turns_per_charge": 1,
+    "revert_to": "canister_empty",
+    "use_action": {
+      "type": "explosion",
+      "fields_type": "fd_fungicidal_gas",
+      "fields_radius": 100,
+      "fields_min_intensity": 3,
+      "fields_max_intensity": 3,
+      "sound_volume": 0,
+      "sound_msg": "Hiss.",
+      "no_deactivate_msg": "You've already armed the fungicidal nuke. The mycus don't stand to chance."
+    },
+    "flags": [ "TRADER_AVOID" ]
+  }
+]

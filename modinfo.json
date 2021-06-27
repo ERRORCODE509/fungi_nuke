@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "fungi_nuke",
+    "name": "fungi_nuke",
+    "authors": [ "ERROR_CODE"],
+    "description": "Slay the mycus in the name of the holy Nut.",
+    "category": "items",
+    "dependencies": [ "dda" ]
+  }
+]
