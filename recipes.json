@@ -16,5 +16,5 @@
       [ [ "canister_empty", 1 ], [ "can_food", 1 ], [ "can_drink", 1 ] ],
       [ [ "superglue", 1 ] ]
     ]
-  },
+  }
 ]
